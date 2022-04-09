@@ -65,4 +65,8 @@ public abstract class HangHoa {
                 + "]";
     }
 
+    public Object getMaHang() {
+        return null;
+    }
+
 }
