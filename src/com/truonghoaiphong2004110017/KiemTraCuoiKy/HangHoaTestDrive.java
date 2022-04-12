@@ -1,6 +1,7 @@
 package com.truonghoaiphong2004110017.KiemTraCuoiKy;
 
 import java.text.ParseException;
+
 import java.util.Scanner;
 
 public class HangHoaTestDrive {
@@ -15,7 +16,7 @@ public class HangHoaTestDrive {
             System.out.println("\t\t1. them hang hoa");
             System.out.println("\t\t2. hien thi");
             System.out.println("\t\t3. xoa hang hoa");
-            System.out.println("\t\t4. sua hang hoa");
+            System.out.println("\t\t4. sap xep hang hoa");
             x = sc.nextInt();
             switch(x){
                 case 1:
@@ -58,7 +59,9 @@ public class HangHoaTestDrive {
                 }
                  break;
                 case 4:
-              
+                danhSachHangHoa.SortHangHoa();
+                break;
+                
             }
            
 

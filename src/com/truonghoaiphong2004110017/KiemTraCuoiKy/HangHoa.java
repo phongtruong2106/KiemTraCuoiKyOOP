@@ -43,6 +43,10 @@ public abstract class HangHoa {
         }
     }
 
+    public int getSoLuongTon() {
+        return soLuongTon;
+    }
+
     public void setDonGia(double donGia) {
        if(donGia > 0 ){
            this.donGia = donGia;

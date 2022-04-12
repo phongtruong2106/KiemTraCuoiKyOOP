@@ -1,7 +1,7 @@
 package com.truonghoaiphong2004110017.KiemTraCuoiKy;
 
 public class HangDienMay extends HangHoa{
-
+ 
     private int ngayBaoHanh;
     private int congXuat;
 
@@ -34,6 +34,7 @@ public class HangDienMay extends HangHoa{
          // TODO Auto-generated method stub
          return "Hang Dien May: [ngay bao hanh; " + ngayBaoHanh + ", công xuat: " + congXuat +  "]"+ super.toString();
     }
+
 
     
 }

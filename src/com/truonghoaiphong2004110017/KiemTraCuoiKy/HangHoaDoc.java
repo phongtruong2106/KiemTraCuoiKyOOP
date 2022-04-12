@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HangHoaDoc {
-    private static final String HANG_HOA_FILE_NAME = "hangHoa.txt";
-
+    private static final String HANG_HOA_FILE_NAME = "hangHoa.txt.txt";
+ 
     //luu danh sach hang hoa vao  file
 
     public void write(List<HangHoa> listHangHoa){

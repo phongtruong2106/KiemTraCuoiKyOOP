@@ -1,23 +1,23 @@
 package com.truonghoaiphong2004110017.KiemTraCuoiKy;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class DanhSachHangHoa {
     private List<HangHoa> list = new ArrayList<>();
-    private HangHoaDoc hangHoaDoc;
      /**
      * init HangHoaDoc object and
      * read list HangHoa when init DanhSachHangHoa object
      */   
     public DanhSachHangHoa(){
-        hangHoaDoc = new HangHoaDoc();
-        list = hangHoaDoc.read();
+        
     }
 
     public void them(HangHoa hangHoa){
         this.list.add(hangHoa);
-        hangHoaDoc.write(list);
+        FileWriter.write("hanghoa.txt", list);
     }
 
     public void output(){
@@ -76,20 +76,31 @@ public class DanhSachHangHoa {
          return hangThucPham;
      }
  
-     //sua
-     public int timVtHH(HangHoa hangHoa){
-         int viTri = -1;
-         viTri = this.list.indexOf(hangHoa);
- 
-         return viTri;
-     }
- 
-     public void suaHH(int viTri, HangHoa hangHoa){
-         this.list.set(viTri, hangHoa);
- 
-     }
+     //edit
+     public void edit(String id) {
+        boolean isExisted = false;
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+            if (list.get(i).getMaHang() == id) {
+                isExisted = true;
+                list.get(i);
+                
+                break;
+            }
+        }
+        if (!isExisted) {
+            System.out.printf("id = %d not existed.\n", id);
+        } else {
+            FileWriter.write("hanghoa.txt", list);
+        }
+    }
 
-     //sap xep
+    public Iterator<HangDienMay> iterator() {
+        return null;
+    }
 
- 
+    public void SortHangHoa(){
+        Collections.sort(list, new SortHangHoa());
+        System.out.println("hang hoa da duoc sap xep");
+    }
 }
