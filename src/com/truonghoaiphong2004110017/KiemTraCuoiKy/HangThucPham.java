@@ -12,8 +12,10 @@ public class HangThucPham extends HangHoa implements Serializable{
     }
 
     @Override
-    public float Vat() {
+    public double Vat() {
         // TODO Auto-generated method stub
+        double vat = 0;
+        vat = this.getDonGia() * 0.05;
         return 0;
     }
     private Date ngaySanXuat;
@@ -58,6 +60,12 @@ public class HangThucPham extends HangHoa implements Serializable{
             isHetHan = true;
         }  
         return isHetHan;                                                                                                                    
+    }
+
+    @Override
+    public boolean DanhGiaHangHoa() {
+        // TODO Auto-generated method stub
+        return false;
     }
 
 

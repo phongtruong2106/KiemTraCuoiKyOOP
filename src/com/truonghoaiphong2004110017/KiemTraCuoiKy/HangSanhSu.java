@@ -15,7 +15,7 @@ public class HangSanhSu extends HangHoa{
 
 
     @Override
-    public float Vat() {
+    public double Vat() {
         // TODO Auto-generated method stub
         return 0;
     }
@@ -33,5 +33,11 @@ public class HangSanhSu extends HangHoa{
         SimpleDateFormat ngayVN= new SimpleDateFormat("dd/MM/yyyy");
         // TODO Auto-generated method stub
         return "Hang Sanh Su: [nha san xuat: " + nhaSanXuat + ", ngay nhap kho: " + ngayVN.format(ngayNhapKho) + "]" +super.toString();
+    }
+
+    @Override
+    public boolean DanhGiaHangHoa() {
+        // TODO Auto-generated method stub
+        return false;
     }
 }
