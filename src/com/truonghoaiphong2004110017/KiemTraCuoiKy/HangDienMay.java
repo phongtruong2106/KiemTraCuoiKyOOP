@@ -24,7 +24,9 @@ public class HangDienMay extends HangHoa{
     }
 
     @Override
-    public float Vat() {
+    public double Vat() {
+        double vat = 0;
+        vat = this.getDonGia() * 0.1;
         // TODO Auto-generated method stub
         return 0;
     }
@@ -33,6 +35,12 @@ public class HangDienMay extends HangHoa{
 
          // TODO Auto-generated method stub
          return "Hang Dien May: [ngay bao hanh; " + ngayBaoHanh + ", công xuat: " + congXuat +  "]"+ super.toString();
+    }
+
+    @Override
+    public boolean DanhGiaHangHoa() {
+        // TODO Auto-generated method stub
+        return false;
     }
 
 

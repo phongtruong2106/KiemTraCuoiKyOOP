@@ -30,7 +30,7 @@ public class ConsoleInput {
             String nhaSanXuat = input.nextLine();
             System.out.print("ngay nhap kho: ");
             Date ngayNhapKho = ngayVn.parse(input.nextLine());
-            hangHoa =  new HangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho);      
+            hangHoa =  new HangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho); 
         }
         if(loai == 2){
             System.out.print("nhap ngay bao hanh: ");

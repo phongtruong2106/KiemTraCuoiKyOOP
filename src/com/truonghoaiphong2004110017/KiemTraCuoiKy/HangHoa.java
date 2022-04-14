@@ -5,6 +5,8 @@ public abstract class HangHoa {
     private String tenHang;
     private int soLuongTon; 
     private double donGia;
+    private static int soLuongHH;
+
 
 
     public HangHoa(String maHang){
@@ -19,6 +21,9 @@ public abstract class HangHoa {
     }
 
     //get and set
+    public static int getSoLuongHH() {
+        return soLuongHH;
+    }
     private void setmaHang(String maHang){
         if(maHang != null){
             this.maHang = maHang;
@@ -60,8 +65,8 @@ public abstract class HangHoa {
     }
 
 
-    public abstract float Vat();
-
+    public abstract double Vat();
+    public abstract boolean DanhGiaHangHoa();
 
     @Override
     public String toString() {
