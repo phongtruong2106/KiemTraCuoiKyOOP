@@ -2,11 +2,12 @@ package com.truonghoaiphong2004110017.KiemTraCuoiKy;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class DanhSachHangHoa {
     private List<HangHoa> list = new ArrayList<>();
+    Scanner input = new Scanner(System.in);
      /**
      * init HangHoaDoc object and
      * read list HangHoa when init DanhSachHangHoa object
@@ -50,7 +51,7 @@ public class DanhSachHangHoa {
     }
  
     // timkiem
-     public HangHoa timHoaDonTheoMa(String maHH) {
+     public HangHoa timHangHoaTheoMa(String maHH) {
      HangHoa hangHoa = null;
      for (HangHoa hh : list) {
          if (hh.getMaHang().toString().equalsIgnoreCase(maHH)) {
@@ -59,9 +60,6 @@ public class DanhSachHangHoa {
      }
      return hangHoa;
  }
- 
-   
- 
     //tìm kiếm loại hành hóa dựa tren ma hàng 
     public HangDienMay timHangĐmTheoMa(String maHH){
              HangDienMay hangDienMay = null;
@@ -72,8 +70,6 @@ public class DanhSachHangHoa {
              }
              return hangDienMay;
      }
- 
-     
      public HangSanhSu timHangSsTheoMa(String maHH){
          HangSanhSu hangSanhSu = null;
          for(HangHoa hh : list){
@@ -95,27 +91,46 @@ public class DanhSachHangHoa {
      }
  
      //edit
-     public void edit(String id) {
-        boolean isExisted = false;
-        int size = list.size();
-        for (int i = 0; i < size; i++) {
-            if (list.get(i).getMaHang() == id) {
-                isExisted = true;
-                list.get(i);
-                
-                break;
-            }
-        }
-        if (!isExisted) {
-            System.out.printf("id = %d not existed.\n", id);
-        } else {
-            FileWriter.write("hanghoa.txt", list);
-        }
+     
+    public int timViTriHoaDon(HangHoa hangHoa){
+        int viTri = -1;     
+        viTri =  this.list.indexOf(hangHoa);
+        return viTri;
     }
 
-    public Iterator<HangDienMay> iterator() {
-        return null;
+     // sua
+     public void suaHoaDon(int viTri, HangHoa hangHoa) {
+        this.list.set(viTri, hangHoa);
     }
+
+
+
+  /*   public void edit(String id) {
+        boolean isExisted = false;
+         
+        for (int j = 0; j < list.size(); j++) {
+            if(j == id){
+                input.nextLine();
+                System.out.println("Nhap ten san pham");
+                String tenHang =input.nextLine();
+                System.out.println("Nhap gia tien");
+                Double donGia = input.nextDouble();
+                System.out.println("Nhap so luong ton kho");
+                int soLuongTonKho = input.nextInt();
+                list.get(j).setTenHang(tenHang);
+                list.get(j).setDonGia(donGia);
+                list.get(j).setSoLuongTonKho(soLuongTonKho);
+               
+            }
+            if (!isExisted) {
+                System.out.printf("id = %d not existed.\n", vitri);
+            } else {
+                FileWriter.write("hanghoa.txt", list);
+            }
+        }
+
+    } */
+    
 
     public void SortHangHoa(){
         Collections.sort(list, new SortHangHoa());
@@ -136,8 +151,18 @@ public class DanhSachHangHoa {
                 SltKHangThucPham = SltKHangThucPham + hangHoa.getSoLuongTon();
            } 
         } System.out.println(" - tổng số lượng hàng điện: " + SltKHangDienMay + "\n - tổng số lượng hàng sành sứ: " +SltKHangSanhSu + "\n - tổng số lượng hàng thực phẩm: " + SltKHangThucPham);
+    }
 
-      
-
+    //tim kiem
+    public void timKiemHangTheoMa(String maHang){
+        
+       
+        for (HangHoa hangHoa : list) {
+           
+            if(maHang.equals(hangHoa.getMaHang())){
+                System.out.println(hangHoa);
+            }
+        }
+        
     }
 }

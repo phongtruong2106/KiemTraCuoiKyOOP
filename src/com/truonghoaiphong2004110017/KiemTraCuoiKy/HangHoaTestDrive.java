@@ -6,8 +6,7 @@ import java.util.Scanner;
 
 public class HangHoaTestDrive {
     static SimpleDateFormat ngayVnK = new SimpleDateFormat("dd/MM/yyyy");
-    public static void main(String[] args) throws ParseException {
-        
+    public static void main(String[] args) throws ParseException {     
         ConsoleInput consoleInput = new ConsoleInput();
         DanhSachHangHoa danhSachHangHoa =new DanhSachHangHoa();
         Scanner sc = new Scanner(System.in);
@@ -22,7 +21,7 @@ public class HangHoaTestDrive {
         HangHoa hangHoa4 = new HangThucPham("e05", "ca rot", 50, 9.000, ngayVnK.parse(ngaySX), ngayVnK.parse(ngayHH), "cty thuc pham");
         HangHoa hangHoa5 = new HangThucPham("e06", "khoai lang", 20, 70.000, ngayVnK.parse(ngaySX), ngayVnK.parse(ngayHH), "cty thuc pham");
         HangHoa hangHoa10 = new HangThucPham("e06", "khoai tay", 10, 10.000, ngayVnK.parse(ngaySX), ngayVnK.parse(ngayHH), "cty thuc pham");
-        HangHoa hangHoa6 = new HangDienMay("d07", "quat may", 3, 70.000, 30, 80);
+        HangHoa hangHoa6 = new HangDienMay("d07", "quat may", 2, 70.000, 30, 80);
         HangHoa hangHoa7 = new HangDienMay("d08", "tu lanh", 10, 1270.000, 30, 820);
         HangHoa hangHoa8 = new HangDienMay("d09", "ti vi", 30, 1070.000, 30, 60);
         HangHoa hangHoa9 = new HangDienMay("d010", "den dien", 3, 10.000, 30, 100);
@@ -45,6 +44,8 @@ public class HangHoaTestDrive {
             System.out.println("\t\t3. xoa hang hoa");
             System.out.println("\t\t4. sap xep hang hoa");
             System.out.println("\t\t5. thong ke hang hoa");
+            System.out.println("\t\t6. sua hang hoa");
+            System.out.println("\t\t7. tim kiem hang hoa");
             x = sc.nextInt();
             switch(x){
                 case 1:
@@ -91,6 +92,18 @@ public class HangHoaTestDrive {
                 break;
                 case 5:
                 danhSachHangHoa.tinhTongSLTungLoai();
+                case 6:
+                System.out.println("nhap ci tri can sua: ");
+                String ma = sc.nextLine();
+                HangHoa hangHoa = danhSachHangHoa.timHangHoaTheoMa(ma);
+                int viTri = danhSachHangHoa.timViTriHoaDon(hangHoa);
+                danhSachHangHoa.suaHoaDon(viTri, hangHoa);
+                break;
+                case 7:
+                System.out.println("nhap ma hang can tim: ");
+                String maHang = danhSachHangHoa.input.nextLine();
+                danhSachHangHoa.timKiemHangTheoMa(maHang);
+                break;
                 
             }
            

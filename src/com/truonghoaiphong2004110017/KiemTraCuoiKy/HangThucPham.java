@@ -16,7 +16,7 @@ public class HangThucPham extends HangHoa implements Serializable{
         // TODO Auto-generated method stub
         double vat = 0;
         vat = this.getDonGia() * 0.05;
-        return 0;
+        return vat;
     }
     private Date ngaySanXuat;
     private Date ngayHetHan;
@@ -45,7 +45,7 @@ public class HangThucPham extends HangHoa implements Serializable{
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Hang Thuc pham: [ngay San Xuat: " +ngayVn.format(ngaySanXuat) + ", ngay het han: " + ngayVn.format(ngayHetHan )+ ", nha cung cap: " + nhaCungCap + "]"+super.toString();
+        return "Hang Thuc pham: [ngay San Xuat: " +ngayVn.format(ngaySanXuat) + ", ngay het han: " + ngayVn.format(ngayHetHan )+ ", nha cung cap: " + nhaCungCap + ", vat: " + Vat() + ", danh gia hang hoa; " + DanhGiaHangHoa() +"]"+super.toString();
     }
 
     //kiểm tra hạn sủ dụng
@@ -63,9 +63,15 @@ public class HangThucPham extends HangHoa implements Serializable{
     }
 
     @Override
-    public boolean DanhGiaHangHoa() {
+    public String DanhGiaHangHoa() {
+        String str = "khong danh gia";
         // TODO Auto-generated method stub
-        return false;
+        if(this.getSoLuongTon() <= 0 && this.tinhHSD() == false){
+            str = "hang kho ban";
+        }else {
+            str = "hang de ban";
+        }
+        return str;
     }
 
 

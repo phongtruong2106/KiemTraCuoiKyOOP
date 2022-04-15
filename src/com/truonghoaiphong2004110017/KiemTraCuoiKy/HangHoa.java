@@ -32,6 +32,10 @@ public abstract class HangHoa {
         }
     }
 
+    public String getMaHang() {
+        return maHang;
+    }
+
     public void setTenHang(String tenHang) {
         if(tenHang != null){
             this.tenHang = tenHang;
@@ -66,7 +70,7 @@ public abstract class HangHoa {
 
 
     public abstract double Vat();
-    public abstract boolean DanhGiaHangHoa();
+    public abstract String DanhGiaHangHoa();
 
     @Override
     public String toString() {
@@ -74,8 +78,9 @@ public abstract class HangHoa {
                 + "]";
     }
 
-    public Object getMaHang() {
-        return null;
+    public void setSoLuongTonKho(int soLuongTonKho) {
     }
+
+
 
 }
