@@ -65,6 +65,8 @@ public class HangHoaTestDrive {
                 danhSachHangHoa.output();
                 break;
                 case 3:
+                System.out.println("danh sách hiện đang có");
+                danhSachHangHoa.output();
                 System.out.println("nhap loai hang hoa muon xoa(1)hang dien may (2)hang sanh su (3)hang thuc pham: ");
                 int l = sc.nextInt();
                 String maHH = sc.nextLine();
@@ -73,18 +75,21 @@ public class HangHoaTestDrive {
                     maHH = sc.nextLine(); 
                     HangDienMay hangDienMay = danhSachHangHoa.timHangĐmTheoMa(maHH);
                     danhSachHangHoa.xoaHangHoa(hangDienMay);
-                } 
+                    System.out.print("hàng hóa đã được loại bỏ");
+                }
                 if(l == 2){
                     System.out.print("nhập mã muốn xóa: ");
                     maHH = sc.nextLine();
                     HangSanhSu hangSanhSu = danhSachHangHoa.timHangSsTheoMa(maHH);
                     danhSachHangHoa.xoaHangHoa(hangSanhSu);
+                    System.out.print("hàng hóa đã được loại bỏ");
                 }
                 if(l == 3){
                     System.out.print("nhập mã muốn xóa: ");
                     maHH = sc.nextLine();
                     HangThucPham hangThucPham = danhSachHangHoa.timHangTpTheoMa(maHH);
                     danhSachHangHoa.xoaHangHoa(hangThucPham);
+                    System.out.print("hàng hóa đã được loại bỏ");
                 }
                  break;
                 case 4:
@@ -99,11 +104,14 @@ public class HangHoaTestDrive {
                 HangHoa hangHoa = danhSachHangHoa.timHangHoaTheoMa(maH);
                 int vitri = danhSachHangHoa.timViTriHoaDon(hangHoa);
                 danhSachHangHoa.editHangHoa(vitri);
+                System.out.print("Sửa thành công");
                 break;
                 case 7:
                 System.out.println("nhap ma hang can tim: ");
                 String maHang = danhSachHangHoa.input.nextLine();
+                System.out.print("hàng hóa bạn đang tìm: " + "\n" + maHang + "\n");
                 danhSachHangHoa.timKiemHangTheoMa(maHang);
+                
                 break;
                 
             }
