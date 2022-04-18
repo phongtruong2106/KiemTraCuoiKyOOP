@@ -98,18 +98,10 @@ public class DanhSachHangHoa {
         return viTri;
     }
 
-     // sua
-     public void suaHoaDon(int viTri, HangHoa hangHoa) {
-        this.list.set(viTri, hangHoa);
-    }
-
-
-
-  /*   public void edit(String id) {
-        boolean isExisted = false;
-         
+    //edit
+    public void edit(int vitri) {       
         for (int j = 0; j < list.size(); j++) {
-            if(j == id){
+            if(j == vitri){
                 input.nextLine();
                 System.out.println("Nhap ten san pham");
                 String tenHang =input.nextLine();
@@ -119,18 +111,12 @@ public class DanhSachHangHoa {
                 int soLuongTonKho = input.nextInt();
                 list.get(j).setTenHang(tenHang);
                 list.get(j).setDonGia(donGia);
-                list.get(j).setSoLuongTonKho(soLuongTonKho);
+                list.get(j).setSoLuongTon(soLuongTonKho);
                
-            }
-            if (!isExisted) {
-                System.out.printf("id = %d not existed.\n", vitri);
-            } else {
-                FileWriter.write("hanghoa.txt", list);
-            }
-        }
+    }
+}
 
-    } */
-    
+}
 
     public void SortHangHoa(){
         Collections.sort(list, new SortHangHoa());
@@ -155,8 +141,6 @@ public class DanhSachHangHoa {
 
     //tim kiem
     public void timKiemHangTheoMa(String maHang){
-        
-       
         for (HangHoa hangHoa : list) {
            
             if(maHang.equals(hangHoa.getMaHang())){
@@ -165,4 +149,8 @@ public class DanhSachHangHoa {
         }
         
     }
+
+   public void BaoCao(){
+       
+   }
 }

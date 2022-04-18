@@ -78,9 +78,5 @@ public abstract class HangHoa {
                 + "]";
     }
 
-    public void setSoLuongTonKho(int soLuongTonKho) {
-    }
-
-
 
 }

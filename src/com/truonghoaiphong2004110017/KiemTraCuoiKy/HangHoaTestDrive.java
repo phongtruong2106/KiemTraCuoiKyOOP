@@ -73,7 +73,7 @@ public class HangHoaTestDrive {
                     maHH = sc.nextLine(); 
                     HangDienMay hangDienMay = danhSachHangHoa.timHangĐmTheoMa(maHH);
                     danhSachHangHoa.xoaHangHoa(hangDienMay);
-                }
+                } 
                 if(l == 2){
                     System.out.print("nhập mã muốn xóa: ");
                     maHH = sc.nextLine();
@@ -93,11 +93,11 @@ public class HangHoaTestDrive {
                 case 5:
                 danhSachHangHoa.tinhTongSLTungLoai();
                 case 6:
-                System.out.println("nhap ci tri can sua: ");
-                String ma = sc.nextLine();
-                HangHoa hangHoa = danhSachHangHoa.timHangHoaTheoMa(ma);
-                int viTri = danhSachHangHoa.timViTriHoaDon(hangHoa);
-                danhSachHangHoa.suaHoaDon(viTri, hangHoa);
+                System.out.println("nhâp");
+                String maH= danhSachHangHoa.input.nextLine();
+                HangHoa hangHoa = danhSachHangHoa.timHangHoaTheoMa(maH);
+                int vitri = danhSachHangHoa.timViTriHoaDon(hangHoa);
+                danhSachHangHoa.edit(vitri);
                 break;
                 case 7:
                 System.out.println("nhap ma hang can tim: ");
