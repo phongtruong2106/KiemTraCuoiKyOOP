@@ -92,12 +92,13 @@ public class HangHoaTestDrive {
                 break;
                 case 5:
                 danhSachHangHoa.tinhTongSLTungLoai();
+                break;
                 case 6:
-                System.out.println("nhâp");
+                System.out.println("nhâp ma hang muon sửa");
                 String maH= danhSachHangHoa.input.nextLine();
                 HangHoa hangHoa = danhSachHangHoa.timHangHoaTheoMa(maH);
                 int vitri = danhSachHangHoa.timViTriHoaDon(hangHoa);
-                danhSachHangHoa.edit(vitri);
+                danhSachHangHoa.editHangHoa(vitri);
                 break;
                 case 7:
                 System.out.println("nhap ma hang can tim: ");
