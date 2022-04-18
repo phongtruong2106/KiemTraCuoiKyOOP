@@ -19,6 +19,11 @@ public abstract class HangHoa {
         this.soLuongTon = soLuongTon;
         this.donGia = donGia;
     }
+    public HangHoa(String tenHang, int soLuongTon, double donGia){
+        this.tenHang = tenHang;
+        this.soLuongTon = soLuongTon;
+        this.donGia = donGia;
+    }
 
     //get and set
     public static int getSoLuongHH() {

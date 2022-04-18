@@ -27,6 +27,12 @@ public class HangThucPham extends HangHoa implements Serializable{
         this.ngayHetHan =ngayHetHan;
         this.ngaySanXuat = ngaySanXuat;
         this.nhaCungCap = nhaCungCap;
+    }
+    public HangThucPham(String tenHang, int soLuongTon, double donGia, Date ngaySanXuat, Date ngayHetHan, String nhaCungCap){
+        super(tenHang, soLuongTon, donGia);
+        this.ngayHetHan =ngayHetHan;
+        this.ngaySanXuat = ngaySanXuat;
+        this.nhaCungCap = nhaCungCap;
 
     }
 
@@ -45,7 +51,7 @@ public class HangThucPham extends HangHoa implements Serializable{
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Hang Thuc pham: [ngay San Xuat: " +ngayVn.format(ngaySanXuat) + ", ngay het han: " + ngayVn.format(ngayHetHan )+ ", nha cung cap: " + nhaCungCap + ", vat: " + Vat() + ", danh gia hang hoa; " + DanhGiaHangHoa() +"]"+super.toString();
+        return "\n Hang Thuc pham: [ngay San Xuat: " +ngayVn.format(ngaySanXuat) + ", ngay het han: " + ngayVn.format(ngayHetHan )+ ", nha cung cap: " + nhaCungCap + ", vat: " + Vat() + ", danh gia hang hoa; " + DanhGiaHangHoa() +"]"+super.toString();
     }
 
     //kiểm tra hạn sủ dụng

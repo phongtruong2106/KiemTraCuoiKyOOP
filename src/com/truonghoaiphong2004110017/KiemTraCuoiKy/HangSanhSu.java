@@ -29,13 +29,20 @@ public class HangSanhSu extends HangHoa{
         this.ngayNhapKho =ngayNhapKho;
         this.nhaSanXuat = nhaSanXuat;
     }
+    public HangSanhSu(String tenHang, int soLuongTon, double donGia, String nhaSanXuat, Date ngayNhapKho)
+    {
+        super(tenHang, soLuongTon, donGia);
+        this.ngayNhapKho =ngayNhapKho;
+        this.nhaSanXuat = nhaSanXuat;
+    }
+
 
 
     @Override
     public String toString() {
         SimpleDateFormat ngayVN= new SimpleDateFormat("dd/MM/yyyy");
         // TODO Auto-generated method stub
-        return "Hang Sanh Su: [nha san xuat: " + nhaSanXuat + ", ngay nhap kho: " + ngayVN.format(ngayNhapKho) + ", vat: " + Vat() + ", danh gia hang hoa: " + DanhGiaHangHoa() + "]" +super.toString();
+        return " \n Hang Sanh Su: [nha san xuat: " + nhaSanXuat + ", ngay nhap kho: " + ngayVN.format(ngayNhapKho) + ", vat: " + Vat() + ", danh gia hang hoa: " + DanhGiaHangHoa() + "]" +super.toString();
     }
 
     @Override

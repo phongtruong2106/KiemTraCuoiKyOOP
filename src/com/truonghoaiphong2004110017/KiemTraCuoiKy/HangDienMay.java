@@ -11,6 +11,11 @@ public class HangDienMay extends HangHoa{
          this.ngayBaoHanh = ngayBaoHanh;
          this.congXuat = congXuat;
     }
+    public HangDienMay(String tenHang, int soLuongTon, double donGia, int ngayBaoHanh,int congXuat ){
+        super(tenHang, soLuongTon, donGia);
+        this.ngayBaoHanh = ngayBaoHanh;
+        this.congXuat = congXuat;
+   }
     public void setNgayBaoHanh(int ngayBaoHanh) {
        if(ngayBaoHanh >= 0){
            this.ngayBaoHanh = ngayBaoHanh;
@@ -42,7 +47,7 @@ public class HangDienMay extends HangHoa{
     public String toString() {
 
          // TODO Auto-generated method stub
-         return "Hang Dien May: [ngay bao hanh; " + ngayBaoHanh + ", công xuat: " + congXuat + ", vat: " + Vat() + ", đánh giá tình trạng hàng hóa: " + DanhGiaHangHoa() +"]"+ super.toString();
+         return "\n Hang Dien May: [ngay bao hanh; " + ngayBaoHanh + ", công xuat: " + congXuat + ", vat: " + Vat() + ", đánh giá tình trạng hàng hóa: " + DanhGiaHangHoa() +"]"+ super.toString();
     }
 
     @Override
