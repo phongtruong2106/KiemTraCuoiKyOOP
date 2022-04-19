@@ -91,7 +91,7 @@ public class HangHoaTestDrive {
                     danhSachHangHoa.xoaHangHoa(hangThucPham);
                     System.out.print("hàng hóa đã được loại bỏ");
                 }
-                 break;
+                break;
                 case 4:
                 danhSachHangHoa.SortHangHoa();
                 break;
@@ -99,17 +99,15 @@ public class HangHoaTestDrive {
                 danhSachHangHoa.tinhTongSLTungLoai();
                 break;
                 case 6:
-                System.out.println("nhâp ma hang muon sửa");
-                String maH= danhSachHangHoa.input.nextLine();
+                System.out.println("nhập mã cần tìm");
+                String maH =consoleInput.input.nextLine();
                 danhSachHangHoa.editHangHoa(maH);
-                System.out.print("Sửa thành công");
                 break;
                 case 7:
                 System.out.println("nhap ma hang can tim: ");
                 String maHang = danhSachHangHoa.input.nextLine();
                 System.out.print("hàng hóa bạn đang tìm: " + "\n" + maHang + "\n");
                 danhSachHangHoa.timKiemHangTheoMa(maHang);
-                
                 break;
                 
             }

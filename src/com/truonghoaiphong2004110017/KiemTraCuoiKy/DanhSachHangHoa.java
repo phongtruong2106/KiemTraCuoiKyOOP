@@ -37,13 +37,14 @@ public class DanhSachHangHoa {
     public void them(HangHoa hangHoa) {
         this.list.add(hangHoa);
         FileWriter.write("hanghoa.txt", list);
+        
 
     }
 
     public void output() {
         for (HangHoa hangHoa : list) {
             System.out.println(hangHoa);
-
+           
         }
 
     }
@@ -110,7 +111,8 @@ public class DanhSachHangHoa {
             ConsoleInputEdit consoleInputEdit = new ConsoleInputEdit();
             HangHoa hangHoa = consoleInputEdit.inputEditHangHoa();
             if(hangHoa!= null)
-            this.list.set(viTri, hangHoa);  
+            this.list.set(viTri, hangHoa);
+            System.out.println("edit sussecfully!!");  
         }
     }
 
