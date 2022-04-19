@@ -101,15 +101,15 @@ public class DanhSachHangHoa {
         viTri = this.list.indexOf(hangHoa);
         return viTri;
     }
-
-
-
-    public void editHangHoa(int viTri) throws ParseException{
+    
+    public void editHangHoa(String maHang) throws ParseException{
+        int viTri = timViTriHoaDon(timHangHoaTheoMa(maHang));
         if(viTri == -1){
             System.out.println("không tìm thấy hàng hóa theo yêu cầu ");
         } else {
             ConsoleInputEdit consoleInputEdit = new ConsoleInputEdit();
             HangHoa hangHoa = consoleInputEdit.inputEditHangHoa();
+            if(hangHoa!= null)
             this.list.set(viTri, hangHoa);  
         }
     }

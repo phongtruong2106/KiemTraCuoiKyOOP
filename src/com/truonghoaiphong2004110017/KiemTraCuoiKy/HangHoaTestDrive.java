@@ -101,9 +101,7 @@ public class HangHoaTestDrive {
                 case 6:
                 System.out.println("nhâp ma hang muon sửa");
                 String maH= danhSachHangHoa.input.nextLine();
-                HangHoa hangHoa = danhSachHangHoa.timHangHoaTheoMa(maH);
-                int vitri = danhSachHangHoa.timViTriHoaDon(hangHoa);
-                danhSachHangHoa.editHangHoa(vitri);
+                danhSachHangHoa.editHangHoa(maH);
                 System.out.print("Sửa thành công");
                 break;
                 case 7:
