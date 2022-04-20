@@ -111,10 +111,6 @@ public class HangHoaTestDrive {
                 break;
                 
             }
-           
-
         }while(x!=0);
     }
-
-   
 }
